@@ -1,13 +1,13 @@
 <template>
   <div class="main-page">
-    <div class="header d-flex justify-content-end">
+    <div class="header d-flex justify-content-end align-items-center">
       <div class="select-lang">
-        <a href="/">Eng <img src="../assets/icons/Line.svg"></a>
+        <a href="/">Eng <img src="../../assets/icons/Line.svg"></a>
       </div>
 
       <div class="notification">
-        <img src="../assets/icons/notification.svg">
-        <img src="../assets/icons/doubt.svg">
+        <img src="../../assets/icons/notification.svg">
+        <img src="../../assets/icons/doubt.svg">
       </div>
 
       <div class="user-info d-flex">
@@ -18,21 +18,12 @@
         </div>
       </div>
     </div>
-
-    <div class="main-content">
-      <Orders/>
-    </div>
   </div>
 </template>
 
 <script>
-import Orders from "@/pages/orders/Orders";
 export default {
-name: "MainPage",
-  components:{
-  Orders,
-  }
-
+name: "Header"
 }
 </script>
 
@@ -40,15 +31,15 @@ name: "MainPage",
 .header{
   background: #fff;
   padding:10px 50px;
-  margin-left: -10px;
-  margin-right: -10px;
-  height:50px;
+  margin-left: -20px;
+  margin-right: -20px;
+  height:55px;
   margin-bottom: 10px;
 
 }
 .main-page{
-  height: 100vh;
   margin:0 10px;
+
 }
 .select-lang a{
   color: #525252;

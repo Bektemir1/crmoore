@@ -3,21 +3,25 @@
     <div class="side-bar-header">
           <img src="../assets/img/logo.svg"/>
     </div>
-    <ul class="list-group">
-        <li class="list-group-item list-item"><img src="../assets/icons/Plus.svg" ><a href="/">Orders</a><span class="counters">13</span></li>
-        <li class="list-group-item list-item"><img src="../assets/icons/Document.svg" ><a href="/">Clients</a><span class="counters">27</span></li>
-        <li class="list-group-item list-item"><img src="../assets/icons/Game.svg" ><a href="/">Loyalty program</a></li>
-        <li class="list-group-item list-item"><img src="../assets/icons/Discovery.svg" ><a href="/">Online</a></li>
-        <li class="list-group-item list-item"><img src="../assets/icons/MoreSquare.svg" ><a href="/">Chats</a><span class="counters">2</span></li>
-        <li class="list-group-item list-item"><img src="../assets/icons/Chart.svg" ><a href="/">Reports</a></li>
-        <li class="list-group-item list-item "><img src="../assets/icons/Setting.svg" ><a href="/">Settings</a></li>
-    </ul>
+    <div>
+      <router-link class="router-link" to="/">Home</router-link>
+      <router-link class="router-link" to="/orders"><img src="../assets/icons/Plus.svg" >Orders <span class="counters">13</span></router-link>
+      <router-link class="router-link" to="/"><img src="../assets/icons/Document.svg" >Clients<span class="counters">27</span></router-link>
+      <router-link class="router-link" to="/"><img src="../assets/icons/Game.svg" >Loyalty Programm</router-link>
+      <router-link class="router-link" to="/"><img src="../assets/icons/Discovery.svg" >Online</router-link>
+      <router-link class="router-link" to="/"><img src="../assets/icons/MoreSquare.svg" >Chats<span class="counters">2</span></router-link>
+      <router-link class="router-link" to="/"><img src="../assets/icons/Chart.svg" >Reports</router-link>
+      <router-link class="router-link" to="/"><img src="../assets/icons/Setting.svg" >Settings</router-link>
+
+    </div>
 </div>
+
 </template>
 
 <script>
 export default {
-name: "SideBar"
+name: "SideBar",
+
 }
 </script>
 
@@ -25,47 +29,18 @@ name: "SideBar"
 .side-bar{
   background: #30303A;
   height: 100vh;
+  width: 100%;
+  position: relative;
+
 }
 .side-bar-header{
   text-align: center;
   background: #4257D0;
   padding:10px 0;
-  height:50px;
+  height:55px;
   margin-bottom: 20px;
 }
-.list-item{
-  border-left:3px solid transparent;
-  border-radius: 0 !important;
-  border-bottom: none;
-  border-top: none;
-  background: none;
-  font-weight: lighter;
-  margin-left: 15px;
-  padding:8px 20px;
-  color:#fff;
-}
 
-.list-item:last-child{
-  position: absolute;
-  bottom:10px;
-  left: 0;
-  padding-left:40px;
-  width: 100%;
-  margin-left:0;
-
-}
-.list-item a{
-  text-decoration: none;
-  color:#fff;
-  font-size: 14px;
-  margin-left: 10px;
-
-}
-.list-item:hover{
-  border-left:3px solid blue;
-  transition: .4s;
-  background: #2A2A31;
-}
 .counters{
   width:24px;
   height: 22px;
@@ -80,4 +55,31 @@ name: "SideBar"
   right:20px;
 }
 
+.router-link {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  color:#fff;
+  text-decoration: none;
+  border-left:3px solid transparent;
+  font-size: 14px;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+.router-link:last-child{
+  position: absolute;
+  width: 100%;
+  bottom:20px;
+
+}
+.router-link:hover{
+  border-left:3px solid blue;
+  background: #2A2A31;
+  transition: 0.4s;
+}
+.router-link img{
+  margin-right: 10px;
+}
+
 </style>
+
